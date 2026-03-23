@@ -1,0 +1,35 @@
+CARRY HAVEN - QUICK EDIT NOTES
+
+1) Open products.js
+- Change the product names
+- Change the prices
+- Change the descriptions
+- Change categories if needed
+- Replace CJ placeholder IDs with your real CJ product IDs
+- Replace cjSourceUrl with the real CJ product links you import from
+
+2) Add real product photos
+Right now the site uses styled placeholder product blocks.
+If you want actual photos, the easiest route is:
+- add an image field to each product in products.js
+- replace the product-image div in app.js with an img tag
+
+3) Link this design to CJdropshipping
+This zip is the FRONT-END STORE DESIGN.
+To make it actually sell and fulfill products through CJ, use one of these routes:
+- Shopify + CJ official integration
+- WooCommerce + CJ integration
+- Custom backend that sends paid orders to CJ after checkout
+
+4) What to do next
+Best production path:
+- keep this front-end look
+- move it into Shopify, WooCommerce, or a custom app
+- connect payments
+- connect CJ product imports and order submission
+
+5) Files included
+- index.html = storefront page
+- styles.css = design and layout
+- products.js = placeholder catalog data
+- app.js = filters, cart, and demo checkout

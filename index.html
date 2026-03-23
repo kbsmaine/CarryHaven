@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carry Haven | Backpack Store</title>
+  <meta name="description" content="Carry Haven backpack storefront with editable placeholder products and CJdropshipping-ready product mapping." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="brand">
+        <div class="brand-logo">CH</div>
+        <div>
+          <div class="brand-name">Carry Haven</div>
+          <div class="brand-sub">Built for wherever you're headed</div>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#shop">Shop</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="cart-button" id="cart-button">Cart <span id="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="pill">Carry Haven Collection</span>
+          <h1>Backpacks that look clean, travel well, and sell like a real brand.</h1>
+          <p>
+            This is a real editable storefront template for your backpack business. The products below use placeholders so you can swap in your own photos, names, pricing, and CJ product links later.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#shop">Shop now</a>
+            <a class="btn btn-secondary" href="#collections">Browse collections</a>
+          </div>
+          <div class="hero-points">
+            <span>Placeholder products included</span>
+            <span>Category filters</span>
+            <span>Editable cart</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="floating-card top-card">
+            <div class="tiny-label">Best seller</div>
+            <strong>Everyday Carry Pack</strong>
+            <span>Replace with your product later</span>
+          </div>
+          <div class="hero-bag bag-left"></div>
+          <div class="hero-bag bag-center"></div>
+          <div class="hero-bag bag-right"></div>
+          <div class="floating-card bottom-card">
+            <div class="tiny-label">Ready to edit</div>
+            <strong>Swap photos in seconds</strong>
+            <span>Just replace the image URLs in products.js</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="collections" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="pill">Collections</span>
+          <h2>Bag categories</h2>
+          <p>Use these as placeholders now, then rename them anytime.</p>
+        </div>
+        <div class="collection-grid">
+          <button class="collection-card active" data-filter="all">All Bags</button>
+          <button class="collection-card" data-filter="travel">Travel Bags</button>
+          <button class="collection-card" data-filter="school">School Bags</button>
+          <button class="collection-card" data-filter="tactical">Tactical Bags</button>
+          <button class="collection-card" data-filter="everyday">Everyday Carry</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="section section-alt">
+      <div class="container">
+        <div class="section-head split-head">
+          <div>
+            <span class="pill">Shop</span>
+            <h2>Featured products</h2>
+          </div>
+          <p class="muted">Everything here is a placeholder you can edit later.</p>
+        </div>
+        <div id="product-grid" class="product-grid"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div>
+          <span class="pill">About</span>
+          <h2>A cleaner storefront than a generic dropshipping page</h2>
+          <p>
+            Carry Haven is laid out like a real brand site instead of a random catalog dump. It is designed so your future product photos and branding can take over without you needing to rebuild the whole store.
+          </p>
+        </div>
+        <div class="feature-stack">
+          <div class="feature-card">
+            <strong>Easy to edit</strong>
+            <span>Change names, pricing, categories, and images in one file.</span>
+          </div>
+          <div class="feature-card">
+            <strong>Made for products</strong>
+            <span>Built around cards, filters, cart flow, and collection browsing.</span>
+          </div>
+          <div class="feature-card">
+            <strong>CJ-ready structure</strong>
+            <span>Each product includes spots for CJ product IDs and source links.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container cta-banner">
+        <div>
+          <span class="pill">CJdropshipping</span>
+          <h2>How this links to CJ</h2>
+          <p>
+            Each product already has a spot for a CJ source URL and a CJ product ID in the data file. Use those fields when you’re ready to connect this design to Shopify, WooCommerce, or a custom backend.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="admin-notes.txt" target="_blank" rel="noreferrer">Open setup notes</a>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-panel">
+      <div class="cart-header">
+        <h3>Your cart</h3>
+        <button id="close-cart" class="icon-button">×</button>
+      </div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total"><span>Total</span><strong id="cart-total">$0.00</strong></div>
+        <button class="btn btn-primary full-width" id="checkout-button">Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <section class="checkout-modal" id="checkout-modal">
+    <div class="checkout-box">
+      <div class="cart-header">
+        <h3>Checkout</h3>
+        <button id="close-checkout" class="icon-button">×</button>
+      </div>
+      <form id="checkout-form" class="checkout-form">
+        <label>Full Name<input name="name" required /></label>
+        <label>Email<input type="email" name="email" required /></label>
+        <label>Address<textarea name="address" rows="4" required></textarea></label>
+        <button class="btn btn-primary full-width" type="submit">Submit Demo Order</button>
+        <p class="tiny-note">This demo storefront stores nothing online. Hook checkout to Shopify, Stripe, or your own backend before launch.</p>
+        <div id="checkout-message" class="checkout-message"></div>
+      </form>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand-name">Carry Haven</div>
+        <p class="muted">Placeholder storefront for your backpack brand.</p>
+      </div>
+      <div>
+        <strong>Files to edit</strong>
+        <p class="muted">products.js, styles.css, and admin-notes.txt</p>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p class="muted">Replace with your real support email and policy links.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
